@@ -1,0 +1,4 @@
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\Entities\bin\Debug\Entities.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\Entities\bin\Debug\Entities.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\Entities\obj\Debug\Entities.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\Entities\obj\Debug\Entities.pdb

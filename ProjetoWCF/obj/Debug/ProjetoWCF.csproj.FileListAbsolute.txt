@@ -1,0 +1,10 @@
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\ProjetoWCF.dll.config
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\ProjetoWCF.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\ProjetoWCF.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\EntityFramework.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\EntityFramework.SqlServer.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\EntityFramework.xml
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\EntityFramework.SqlServer.xml
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.csproj.CopyComplete
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.pdb

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BarbeariaModelStoreContainer" CdmEntityContainer="BarbeariaEntities">
+    <EntitySetMapping Name="Agendamento">
+      <EntityTypeMapping TypeName="BarbeariaModel.Agendamento">
+        <MappingFragment StoreEntitySet="Agendamento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idprestador" ColumnName="idprestador" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="horario" ColumnName="horario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="BarbeariaModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="idsexo" ColumnName="idsexo" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidade">
+      <EntityTypeMapping TypeName="BarbeariaModel.Especialidade">
+        <MappingFragment StoreEntitySet="Especialidade">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prestador">
+      <EntityTypeMapping TypeName="BarbeariaModel.Prestador">
+        <MappingFragment StoreEntitySet="Prestador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="especialidade" ColumnName="especialidade" />
+          <ScalarProperty Name="idespecialidade" ColumnName="idespecialidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="BarbeariaModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoVenda">
+      <EntityTypeMapping TypeName="BarbeariaModel.ProdutoVenda">
+        <MappingFragment StoreEntitySet="ProdutoVenda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idproduto" ColumnName="idproduto" />
+          <ScalarProperty Name="idvenda" ColumnName="idvenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servico">
+      <EntityTypeMapping TypeName="BarbeariaModel.Servico">
+        <MappingFragment StoreEntitySet="Servico">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicoVenda">
+      <EntityTypeMapping TypeName="BarbeariaModel.ServicoVenda">
+        <MappingFragment StoreEntitySet="ServicoVenda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idservico" ColumnName="idservico" />
+          <ScalarProperty Name="idvenda" ColumnName="idvenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sexo">
+      <EntityTypeMapping TypeName="BarbeariaModel.Sexo">
+        <MappingFragment StoreEntitySet="Sexo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sexo1" ColumnName="sexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venda">
+      <EntityTypeMapping TypeName="BarbeariaModel.Venda">
+        <MappingFragment StoreEntitySet="Venda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idprestador" ColumnName="idprestador" />
+          <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
