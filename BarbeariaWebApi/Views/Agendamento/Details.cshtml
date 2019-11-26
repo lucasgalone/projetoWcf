@@ -1,0 +1,40 @@
+﻿@model BarbeariaWebApi.AgendamentoServiceReference.Agendamento
+
+@{
+    ViewBag.Title = "Visualização";
+}
+
+    <h2>Visualização</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Horário
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horario)
+        </dd>
+
+        <dt>
+            Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.nome)
+        </dd>
+
+        <dt>
+            Prestador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prestador.nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Voltar", "Index")</button>
+</p>

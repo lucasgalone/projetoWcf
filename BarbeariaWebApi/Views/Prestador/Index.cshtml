@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BarbeariaWebApi.PrestadorServiceReference.Prestador>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista de Prestador</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            CPF
+        </th>
+        <th>
+            ESPECIALIDADE
+        </th>
+        <th>
+            NOME
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idespecialidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

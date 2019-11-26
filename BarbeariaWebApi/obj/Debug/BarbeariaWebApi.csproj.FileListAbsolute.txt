@@ -78,3 +78,6 @@ C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\bin\
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\obj\Debug\BarbeariaWebApi.csproj.CopyComplete
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\obj\Debug\BarbeariaWebApi.dll
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\obj\Debug\BarbeariaWebApi.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\bin\Entity.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\bin\Entity.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\BarbeariaWebApi\obj\Debug\BarbeariaWebApi.csprojAssemblyReference.cache

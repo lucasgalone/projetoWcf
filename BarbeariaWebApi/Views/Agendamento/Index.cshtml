@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BarbeariaWebApi.AgendamentoServiceReference.Agendamento>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista de Agendamentos</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Horário
+        </th>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Prestador
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.horario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prestador.nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

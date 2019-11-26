@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Lucas Vinicius Galone</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="@Url.Content("~/Content/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,13 +19,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Início", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
+                    <li>@Html.ActionLink("Prestador", "Index", "Prestador")</li>
+                    <li>@Html.ActionLink("Produto", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Serviço", "Index", "Servico")</li>
+                    <li>@Html.ActionLink("Venda", "Index", "Venda")</li>
+                    <li>@Html.ActionLink("Agendamento", "Index", "Agendamento")</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Lucas Vinicius Galone</p>
         </footer>
     </div>
 

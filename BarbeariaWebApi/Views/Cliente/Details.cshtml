@@ -1,17 +1,16 @@
-﻿@model BarbeariaWebApi.ClienteServiceReference.Cliente
+﻿@model BarbeariaWebApi.ClientesServiceReference.Cliente
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Visualização";
 }
 
-<h2>Details</h2>
+    <h2>Visualização</h2>
 
 <div>
-    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.cpf)
+            CPF
         </dt>
 
         <dd>
@@ -19,15 +18,15 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.idsexo)
+            SEXO
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.idsexo)
+            @Html.DisplayFor(model => model.Sexo.sexo1)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nome)
+            NOME
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefone)
+            TELEFONE
         </dt>
 
         <dd>
@@ -45,6 +44,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <button type="button" class="btn btn-default">@Html.ActionLink("Voltar", "Index")</button>
+
 </p>

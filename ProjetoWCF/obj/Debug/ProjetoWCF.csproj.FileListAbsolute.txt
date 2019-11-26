@@ -8,3 +8,6 @@ C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\Entit
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.csproj.CopyComplete
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.dll
 C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\obj\Debug\ProjetoWCF.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\Entity.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\prova2\ProjetoWCF\ProjetoWCF\bin\Entity.pdb

@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarbeariaWebApi", "Barbeari
 		{2E63CF1F-0999-4A3A-AB5C-8230A69686E5} = {2E63CF1F-0999-4A3A-AB5C-8230A69686E5}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{8A258756-6C84-4CAC-A67D-9D2BC7B76C22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{A00F47EE-CC2D-43DF-B431-CCB1885ADCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A00F47EE-CC2D-43DF-B431-CCB1885ADCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A00F47EE-CC2D-43DF-B431-CCB1885ADCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A258756-6C84-4CAC-A67D-9D2BC7B76C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A258756-6C84-4CAC-A67D-9D2BC7B76C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A258756-6C84-4CAC-A67D-9D2BC7B76C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A258756-6C84-4CAC-A67D-9D2BC7B76C22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

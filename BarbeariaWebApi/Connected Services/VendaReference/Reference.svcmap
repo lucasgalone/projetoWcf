@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c513a382-4540-4d0f-a614-323bcad1a8bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55888/ServiceVenda.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceVenda.wsdl" MetadataType="Wsdl" ID="121b692e-244a-40b6-a0f0-d90f6437a44d" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?wsdl" />
+    <MetadataFile FileName="ServiceVenda.disco" MetadataType="Disco" ID="10e4d748-911f-461e-957d-013a5475c3be" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?disco" />
+    <MetadataFile FileName="ServiceVenda2.xsd" MetadataType="Schema" ID="db5dcdea-d16f-4540-b3fb-33ed68520262" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceVenda1.xsd" MetadataType="Schema" ID="5d1ffd18-3849-4ccf-9b4b-5576ca0482be" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceVenda3.xsd" MetadataType="Schema" ID="e0139c60-af4b-4f17-8b4b-69c21746b033" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceVenda.xsd" MetadataType="Schema" ID="d5b5d0bd-be1f-466e-ae23-886fbf93366b" SourceId="1" SourceUrl="http://localhost:55888/ServiceVenda.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

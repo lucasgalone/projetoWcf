@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ProjetoWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProjetoWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPrestador">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Prestador" nillable="true" type="tns:Prestador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrestador" nillable="true" type="tns:ArrayOfPrestador" />
+  <xs:complexType name="Prestador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agendamento" nillable="true" type="tns:ArrayOfAgendamento" />
+      <xs:element minOccurs="0" name="Especialidade1" nillable="true" type="tns:Especialidade" />
+      <xs:element minOccurs="0" name="Venda" nillable="true" type="tns:ArrayOfVenda" />
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="especialidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idespecialidade" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Prestador" nillable="true" type="tns:Prestador" />
+  <xs:complexType name="ArrayOfAgendamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Agendamento" nillable="true" type="tns:Agendamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgendamento" nillable="true" type="tns:ArrayOfAgendamento" />
+  <xs:complexType name="Agendamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+      <xs:element minOccurs="0" name="Prestador" nillable="true" type="tns:Prestador" />
+      <xs:element minOccurs="0" name="horario" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idcliente" type="xs:int" />
+      <xs:element minOccurs="0" name="idprestador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agendamento" nillable="true" type="tns:Agendamento" />
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agendamento" nillable="true" type="tns:ArrayOfAgendamento" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="tns:Sexo" />
+      <xs:element minOccurs="0" name="Venda" nillable="true" type="tns:ArrayOfVenda" />
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idsexo" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:complexType name="Sexo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:ArrayOfCliente" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="sexo1" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sexo" nillable="true" type="tns:Sexo" />
+  <xs:complexType name="ArrayOfCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCliente" nillable="true" type="tns:ArrayOfCliente" />
+  <xs:complexType name="ArrayOfVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Venda" nillable="true" type="tns:Venda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVenda" nillable="true" type="tns:ArrayOfVenda" />
+  <xs:complexType name="Venda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+      <xs:element minOccurs="0" name="Prestador" nillable="true" type="tns:Prestador" />
+      <xs:element minOccurs="0" name="ProdutoVenda" nillable="true" type="tns:ArrayOfProdutoVenda" />
+      <xs:element minOccurs="0" name="ServicoVenda" nillable="true" type="tns:ArrayOfServicoVenda" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idcliente" type="xs:int" />
+      <xs:element minOccurs="0" name="idprestador" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Venda" nillable="true" type="tns:Venda" />
+  <xs:complexType name="ArrayOfProdutoVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProdutoVenda" nillable="true" type="tns:ProdutoVenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProdutoVenda" nillable="true" type="tns:ArrayOfProdutoVenda" />
+  <xs:complexType name="ProdutoVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Produto" nillable="true" type="tns:Produto" />
+      <xs:element minOccurs="0" name="Venda" nillable="true" type="tns:Venda" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idproduto" type="xs:int" />
+      <xs:element minOccurs="0" name="idvenda" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProdutoVenda" nillable="true" type="tns:ProdutoVenda" />
+  <xs:complexType name="Produto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProdutoVenda" nillable="true" type="tns:ArrayOfProdutoVenda" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="preco" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Produto" nillable="true" type="tns:Produto" />
+  <xs:complexType name="ArrayOfServicoVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServicoVenda" nillable="true" type="tns:ServicoVenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServicoVenda" nillable="true" type="tns:ArrayOfServicoVenda" />
+  <xs:complexType name="ServicoVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Servico" nillable="true" type="tns:Servico" />
+      <xs:element minOccurs="0" name="Venda" nillable="true" type="tns:Venda" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idservico" type="xs:int" />
+      <xs:element minOccurs="0" name="idvenda" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicoVenda" nillable="true" type="tns:ServicoVenda" />
+  <xs:complexType name="Servico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServicoVenda" nillable="true" type="tns:ArrayOfServicoVenda" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="preco" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Servico" nillable="true" type="tns:Servico" />
+  <xs:complexType name="Especialidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Prestador" nillable="true" type="tns:ArrayOfPrestador" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Especialidade" nillable="true" type="tns:Especialidade" />
+</xs:schema>

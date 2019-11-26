@@ -6,21 +6,21 @@ namespace ProjetoWCF
 {
     public class ServicePrestador : IServicePrestador
     {
-        private BarbeariaEntities _db;
+        private BarbeariaDoisEntities _db;
 
         public List<Prestador> FindAll()
         {
-            using (_db = new BarbeariaEntities())
+            using (_db = new BarbeariaDoisEntities())
             {
                 _db.Configuration.ProxyCreationEnabled = false;
-                var prestadores = _db.Prestador.ToList();
+                var prestadores = _db.Prestador.Include("Especialidade").ToList();
                 return prestadores;
             }
         }
 
         public Prestador Find(int id)
         {
-            using (_db = new BarbeariaEntities())
+            using (_db = new BarbeariaDoisEntities())
             {
                 _db.Configuration.ProxyCreationEnabled = false;
                 var prestador = _db.Prestador.Single(x => x.id.Equals(id));
@@ -30,7 +30,7 @@ namespace ProjetoWCF
 
         public Prestador New(Prestador prestador)
         {
-            using (_db = new BarbeariaEntities())
+            using (_db = new BarbeariaDoisEntities())
             {
                 _db.Configuration.ProxyCreationEnabled = false;
                 _db.Prestador.Add(prestador);
@@ -41,7 +41,7 @@ namespace ProjetoWCF
 
         public Prestador Update(int id, Prestador prestador)
         {
-            using (_db = new BarbeariaEntities())
+            using (_db = new BarbeariaDoisEntities())
             {
                 _db.Configuration.ProxyCreationEnabled = false;
                 var dbPrestador = _db.Prestador.Single(x => x.id.Equals(id));
@@ -56,7 +56,7 @@ namespace ProjetoWCF
 
         public Prestador Delete(int id)
         {
-            using (_db = new BarbeariaEntities())
+            using (_db = new BarbeariaDoisEntities())
             {
                 _db.Configuration.ProxyCreationEnabled = false;
                 var prestador = _db.Prestador.Find(id);

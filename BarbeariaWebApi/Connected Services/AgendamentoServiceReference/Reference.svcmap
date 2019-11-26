@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ee4cf5b-fc4b-43ec-a342-045153c78d58" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55888/ServiceAgendamento.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceAgendamento.xsd" MetadataType="Schema" ID="079cc6dc-6e31-499e-be3a-7c36204669b2" SourceId="1" SourceUrl="http://localhost:55888/ServiceAgendamento.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceAgendamento1.xsd" MetadataType="Schema" ID="7a07c1ba-ac27-490e-b158-a114bfd4a2cb" SourceId="1" SourceUrl="http://localhost:55888/ServiceAgendamento.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceAgendamento.wsdl" MetadataType="Wsdl" ID="038f6f7e-0dc2-40ad-8f27-121474e594a6" SourceId="1" SourceUrl="http://localhost:55888/ServiceAgendamento.svc?wsdl" />
+    <MetadataFile FileName="ServiceAgendamento.disco" MetadataType="Disco" ID="f93fb63a-3421-4ce3-838a-a45d8e1aad5b" SourceId="1" SourceUrl="http://localhost:55888/ServiceAgendamento.svc?disco" />
+    <MetadataFile FileName="ServiceAgendamento2.xsd" MetadataType="Schema" ID="ee26dce8-7743-4dc2-b94a-eb73fbc7cc0d" SourceId="1" SourceUrl="http://localhost:55888/ServiceAgendamento.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

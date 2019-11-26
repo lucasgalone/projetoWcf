@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0af8573be9964716bbd537374a7f6022" Name="Diagram1">
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Agendamento" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Cliente" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Especialidade" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Prestador" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Produto" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.ProdutoVenda" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Servico" Width="1.5" PointX="8.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.ServicoVenda" Width="1.5" PointX="10.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Sexo" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BarbeariaDoisModel.Venda" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Agendamento_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Agendamento_Prestador" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Prestador_Sexo" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Venda_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Prestador_Especialidade" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_Venda_Prestador" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_ProdutoVenda_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_ProdutoVenda_Venda" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_ServicoVenda_Servico" ManuallyRouted="false" />
+        <AssociationConnector Association="BarbeariaDoisModel.FK_ServicoVenda_Venda" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

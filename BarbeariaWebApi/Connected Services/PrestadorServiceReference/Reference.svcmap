@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47a45e9f-d08e-4f63-aa31-f3b3ddd0a72f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55888/ServicePrestador.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicePrestador.wsdl" MetadataType="Wsdl" ID="c8bb0812-d003-41ed-9a92-955f1e404327" SourceId="1" SourceUrl="http://localhost:55888/ServicePrestador.svc?wsdl" />
+    <MetadataFile FileName="ServicePrestador.xsd" MetadataType="Schema" ID="1d614a51-2185-48ea-8ac5-33d56ad6986f" SourceId="1" SourceUrl="http://localhost:55888/ServicePrestador.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicePrestador1.xsd" MetadataType="Schema" ID="e7bad816-612f-414c-8c70-9065e0b547fb" SourceId="1" SourceUrl="http://localhost:55888/ServicePrestador.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicePrestador2.xsd" MetadataType="Schema" ID="3a8f5dda-c6bd-4250-b179-ed5e14357d5c" SourceId="1" SourceUrl="http://localhost:55888/ServicePrestador.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicePrestador.disco" MetadataType="Disco" ID="c3824d5b-916d-44bf-9bac-e8bb9d5bea5f" SourceId="1" SourceUrl="http://localhost:55888/ServicePrestador.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

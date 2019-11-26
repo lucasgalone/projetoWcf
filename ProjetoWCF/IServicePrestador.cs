@@ -11,15 +11,21 @@ namespace ProjetoWCF
     public interface IServicePrestador
     {
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
+
         List<Prestador> FindAll();
 
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
+
         Prestador Find(int id);
 
         [OperationContract]
         Prestador New(Prestador prestador);
 
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
+
         Prestador Update(int id, Prestador prestador);
 
         [OperationContract]

@@ -1,0 +1,32 @@
+﻿@model BarbeariaWebApi.ProdutoServiceReference.Produto
+
+@{
+    ViewBag.Title = "Visualização";
+}
+
+    <h2>Visualização</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            NOME
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            PREÇO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Voltar", "Index")</button>
+</p>

@@ -24,12 +24,11 @@ namespace ProjetoWCF
         public int id { get; set; }
         public string cpf { get; set; }
         public string nome { get; set; }
-        public string especialidade { get; set; }
         public int idespecialidade { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Agendamento> Agendamento { get; set; }
-        public virtual Especialidade Especialidade1 { get; set; }
+        public virtual Especialidade Especialidade { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venda> Venda { get; set; }
     }

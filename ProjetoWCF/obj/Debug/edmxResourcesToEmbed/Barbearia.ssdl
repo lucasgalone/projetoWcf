@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BarbeariaDoisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agendamento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idprestador" Type="int" Nullable="false" />
+    <Property Name="idcliente" Type="int" Nullable="false" />
+    <Property Name="horario" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="idsexo" Type="int" Nullable="false" />
+    <Property Name="telefone" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Especialidade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prestador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cpf" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="idespecialidade" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="preco" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProdutoVenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idproduto" Type="int" Nullable="false" />
+    <Property Name="idvenda" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Servico">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="preco" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicoVenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idservico" Type="int" Nullable="false" />
+    <Property Name="idvenda" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sexo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sexo" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Venda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idprestador" Type="int" Nullable="false" />
+    <Property Name="idcliente" Type="int" Nullable="false" />
+    <Property Name="total" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Agendamento_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Agendamento" Type="Self.Agendamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Agendamento">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agendamento_Prestador">
+    <End Role="Prestador" Type="Self.Prestador" Multiplicity="1" />
+    <End Role="Agendamento" Type="Self.Agendamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestador">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Agendamento">
+        <PropertyRef Name="idprestador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestador_Especialidade">
+    <End Role="Especialidade" Type="Self.Especialidade" Multiplicity="1" />
+    <End Role="Prestador" Type="Self.Prestador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidade">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Prestador">
+        <PropertyRef Name="idespecialidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prestador_Sexo">
+    <End Role="Sexo" Type="Self.Sexo" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sexo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="idsexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdutoVenda_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="ProdutoVenda" Type="Self.ProdutoVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProdutoVenda">
+        <PropertyRef Name="idproduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdutoVenda_Venda">
+    <End Role="Venda" Type="Self.Venda" Multiplicity="1" />
+    <End Role="ProdutoVenda" Type="Self.ProdutoVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venda">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProdutoVenda">
+        <PropertyRef Name="idvenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicoVenda_Servico">
+    <End Role="Servico" Type="Self.Servico" Multiplicity="1" />
+    <End Role="ServicoVenda" Type="Self.ServicoVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servico">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ServicoVenda">
+        <PropertyRef Name="idservico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicoVenda_Venda">
+    <End Role="Venda" Type="Self.Venda" Multiplicity="1" />
+    <End Role="ServicoVenda" Type="Self.ServicoVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venda">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ServicoVenda">
+        <PropertyRef Name="idvenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venda_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="idcliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venda_Prestador">
+    <End Role="Prestador" Type="Self.Prestador" Multiplicity="1" />
+    <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prestador">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="idprestador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BarbeariaDoisModelStoreContainer">
+    <EntitySet Name="Agendamento" EntityType="Self.Agendamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Especialidade" EntityType="Self.Especialidade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prestador" EntityType="Self.Prestador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProdutoVenda" EntityType="Self.ProdutoVenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servico" EntityType="Self.Servico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicoVenda" EntityType="Self.ServicoVenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sexo" EntityType="Self.Sexo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Agendamento_Cliente" Association="Self.FK_Agendamento_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Agendamento" EntitySet="Agendamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agendamento_Prestador" Association="Self.FK_Agendamento_Prestador">
+      <End Role="Prestador" EntitySet="Prestador" />
+      <End Role="Agendamento" EntitySet="Agendamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestador_Especialidade" Association="Self.FK_Prestador_Especialidade">
+      <End Role="Especialidade" EntitySet="Especialidade" />
+      <End Role="Prestador" EntitySet="Prestador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prestador_Sexo" Association="Self.FK_Prestador_Sexo">
+      <End Role="Sexo" EntitySet="Sexo" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdutoVenda_Produto" Association="Self.FK_ProdutoVenda_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="ProdutoVenda" EntitySet="ProdutoVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdutoVenda_Venda" Association="Self.FK_ProdutoVenda_Venda">
+      <End Role="Venda" EntitySet="Venda" />
+      <End Role="ProdutoVenda" EntitySet="ProdutoVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicoVenda_Servico" Association="Self.FK_ServicoVenda_Servico">
+      <End Role="Servico" EntitySet="Servico" />
+      <End Role="ServicoVenda" EntitySet="ServicoVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicoVenda_Venda" Association="Self.FK_ServicoVenda_Venda">
+      <End Role="Venda" EntitySet="Venda" />
+      <End Role="ServicoVenda" EntitySet="ServicoVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venda_Cliente" Association="Self.FK_Venda_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venda_Prestador" Association="Self.FK_Venda_Prestador">
+      <End Role="Prestador" EntitySet="Prestador" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

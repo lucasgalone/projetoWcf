@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -13,15 +14,23 @@ namespace ProjetoWCF
     public interface IServiceCliente
     {
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
         List<Cliente> FindAll();
 
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
         Cliente Find(int id);
+
+        [OperationContract]
+        [ReferencePreservingDataContractFormat]
+        IEnumerable<ComboboxDto> FindAllCombobox();
+
 
         [OperationContract]
         Cliente New(Cliente cliente);
 
         [OperationContract]
+        [ReferencePreservingDataContractFormat]
         Cliente Update(int id, Cliente cliente);
 
         [OperationContract]
@@ -29,7 +38,7 @@ namespace ProjetoWCF
     }
 
     public class ReferencePreservingDataContractFormatAttribute
-       : Attribute, IOperationBehavior
+   : Attribute, IOperationBehavior
     {
         #region IOperationBehavior Members
         public void AddBindingParameters(OperationDescription description,
@@ -85,4 +94,5 @@ namespace ProjetoWCF
         }
         #endregion
     }
+
 }
